@@ -22,13 +22,21 @@ int main()
     //Declares that value as the seed for the randomly generated number, so the numbers vary further from one another
     srand(seed);
     
-    double numb1 = 1 + rand() % 999;
-    double numb2 = 1 + rand() % 999;
+    double numb1 = rand() % 999;
+    double numb2 = rand() % 999;
     
-    cout << "Add the following 2 numbers together, and press the enter key to reveal the answer once you have solved the problem;" << endl;
     cout << numb1 << endl;
     cout << numb2 << endl;
-    system("pause");
-    cout << numb1 + numb2;
+    
+    double sum = numb1 + numb2;
+    double userSum;
+
+    cout << "Enter the sum of the 2 numbers above;" << endl;
+    cin >> userSum;
+    
+    if (sum == userSum)
+        cout << "Correct, you win nothing!";
+    else
+        cout << "The answer provided is incorrect, the sum of the numbers above was " << sum;
 }
 
