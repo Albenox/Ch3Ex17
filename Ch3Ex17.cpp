@@ -9,6 +9,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <iomanip>
 using namespace std;
 
 int main()
@@ -25,8 +26,8 @@ int main()
     double numb1 = rand() % 999;
     double numb2 = rand() % 999;
     
-    cout << numb1 << endl;
-    cout << numb2 << endl;
+    cout << right << setw(3) << numb1 << endl;
+    cout << right << setw(3) << numb2 << endl;
     
     double sum = numb1 + numb2;
     double userSum;
