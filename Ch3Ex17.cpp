@@ -9,6 +9,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <iomanip>
 using namespace std;
 
 int main()
@@ -26,8 +27,8 @@ int main()
     double numb2 = 1 + rand() % 999;
     
     cout << "Add the following 2 numbers together, and press the enter key to reveal the answer once you have solved the problem;" << endl;
-    cout << numb1 << endl;
-    cout << numb2 << endl;
+    cout << right << setw(3) << numb1 << endl;
+    cout << right << setw(3) << numb2 << endl;
     system("pause");
     cout << numb1 + numb2;
 }
